@@ -1,0 +1,87 @@
+body {
+    background-color:rgb(16, 14, 105);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    padding-top: 90px;
+    vertical-align: middle;
+  }
+  .jumbotron {
+    background-color: rgb(58, 26, 243);
+    text-align: center;;
+    color:whitesmoke;
+    border-radius: 0;
+    border-bottom: 10px solid rgb(0, 0, 0);
+  }
+  .col-md-2 ,.col-md-9,.col-md-1{
+    padding: 0;
+  }
+  input{
+    background: transparent;
+    border: none;
+    padding-left: 3px;
+    
+  }
+  .container{
+    background-color:rgb(16, 14, 105);
+  }
+  .plannerContainer{
+    margin-top: 2px;
+    margin-bottom: 80px;
+    padding: 40px;
+  }
+  .plannerRow{
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .time-block{
+    background-color: rgb(39, 219, 243);
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  .dailyPlan{
+    color: black;
+    font-size: 12pt;
+    height: 100%;
+    width: 100%;
+  }
+  .saveBtn {
+    background-color: rgb(255, 255, 255);
+    color: linen;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+   
+  }
+  .hour {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-top: 1px dashed #000000;
+  }
+  .past {
+    background-color: #D3D3D3;
+    color: white;
+  }
+  .present {
+    background-color: #FF6961;
+    color: white;
+  }
+  .future {
+    background-color: #77DD77;
+    color: white;
+  }
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
