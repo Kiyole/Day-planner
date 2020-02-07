@@ -29,10 +29,10 @@
                     <span class="time-block">9am</span>
                 </div>
                 <div class="col-md-9" style="background-color: lightgray;">
-                    <input id="nine" class="dailyPlan" type="textarea" value=""></input>
+                    <input id="nine" class="dailyPlan" type="text"></input>
                 </div>
                 <div class="col-md-1">
-                    <button class="saveBtn" type="submit">Save</button>
+                    <button class="saveBtn" id="saveBtn9">Save</button>
                 </div>
             </div>
             <div class="row plannerRow">
@@ -127,15 +127,110 @@
     </form>
     <!-- <script src="moment.js"></script> -->
     <script type="text/javascript">
-        var One = $('#nine')
-        var OneVal = One.value
-        var OneVal = localStorage.setItem('firstBox', JSON.stringify(OneVal))
-        console.log(OneVal)
 
-        function plan() {
+        //  function data(){
 
+        //      var key = 'nine';
+        //     var value = $('#nine').val();
 
+        //      let objStore = JSON.stringify(value);
+        //      localStorage.setItem('nine', objStore);
+        //      let objValue = JSON.parse(localStorage.getItem('nine'));
+        //      console.log(objValue)
+        //      $('#nine').val(objValue)
+        //  }
+        // var nine = $('#nine');
+        // data(nine);
+
+        function persistInput(input) {
+            var key = "input-" + input.id;
+
+            var storedValue = localStorage.getItem(key);
+
+            if (storedValue)
+                input.value = storedValue;
+
+            input.addEventListener('input', function () {
+                localStorage.setItem(key, input.value);
+            });
         }
+        var Element9 = document.getElementById("nine");
+        var Element10 = document.getElementById("ten");
+        var Element11 = document.getElementById("eleven");
+        var Element12 = document.getElementById("twelve");
+        var Element13 = document.getElementById("thirteen");
+        var Element14 = document.getElementById("fourteen");
+        var Element15 = document.getElementById("fifteen");
+        var Element16 = document.getElementById("sixteen");
+        var Element17 = document.getElementById("seventeen");
+
+        persistInput(Element9);
+         persistInput(Element10);
+         persistInput(Element11);
+         persistInput(Element12);
+         persistInput(Element13);
+         persistInput(Element14);
+         persistInput(Element15);
+         persistInput(Element16);
+         persistInput(Element17);
+
+
+        //   $('#saveBtn9').on('click', function persistInput(input) {
+        //      persistInput(inputElement);
+        //   })
+        //   $('#saveBtn9').off('click');
+
+        // $(inputElement).attr(Boolean , true)
+
+        // if(inputElement == true)
+        // $('#saveBtn').on('click',function(){
+        //     persistInput(inputElement);
+        //     $(inputElement).attr(Boolean , false);
+        // })
+        // else (inputElement !== true)
+        // $('#saveBtn').on('click', function(){
+        //     persistInput.off();
+        //     $('#nine').attr('nine', true);
+        // })
+
+
+
+
+        //     function save() {
+
+        //      var p = document.createElement('p')
+        //      var newS = document.createElement('span')
+        //      var uInput = document.getElementById('nine');
+        //      localStorage.setItem('test', uInput.value);
+
+        //      var StoredVal = (localStorage.getItem('test'));
+        //      p.appendChild(StoredVal)
+        //      newS.appendChild(p)
+
+
+        //      console.log(StoredVal)
+
+        //  }
+        //   $('.saveBtn').on('click', save())
+        //   function save(){
+
+        //       $('input[type = "text"]').each(function(){
+        //      var id = $(this).attr('id');
+        //       var value = $(this).val();
+        //       localStorage.setItem(id, value);
+
+        //       $('input[type = "text"]').each(function(){
+        //           var id =(this).attr('id');
+        //           var value  = localStorage.getItem(id);
+        //     (this).val(value);
+
+        //      })
+        //   })
+        //  })
+
+
+
+
         // var userPlan = localStorage.getItem('textSlot');
         // var textSlot =JSON.parse(userPlan)
         // var userInput = $('.value')
